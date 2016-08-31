@@ -1,0 +1,28 @@
+language: node_js
+sudo: required
+before_install:
+  - source <(curl -SLs https://raw.githubusercontent.com/leafjs/orient/${TRAVIS_BRANCH}/prepareTravis.sh)
+install:
+  - npm install -g codecov
+script:
+  - npm test
+  - codecov
+node_js:
+  - "5"
+  - "4"
+env:
+  - CXX=g++-4.8 CC=gcc-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+      - gcc-4.8
+      - m4
+      - flex
+  code_climate:
+    repo_token: dad0fdcba0769ea5e75ba511f477b6874235cfd1a58e487442f2a76aa4134d3f
+cache:
+  directories:
+    - node_modules
