@@ -3,7 +3,7 @@
 gcc -v || ln -s $(which gcc-4.8) /usr/bin/gcc
 gcc -v || exit 1
 
-orientdb="orientdb-community-2.2.5"
+orientdb="orientdb-community-2.2.8"
 wget "http://orientdb.com/download.php?email=unknown@unknown.com&file=${orientdb}.tar.gz&os=linux" -O ${orientdb}.tar.gz
 
 tar xzf "${orientdb}.tar.gz"
