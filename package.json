@@ -1,6 +1,6 @@
 {
   "name": "leaf-orient",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "OrientDB ODM with support for schemas inspired by mongoose",
   "author": {
     "name": "Chris Ye",
